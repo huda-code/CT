@@ -1,0 +1,23 @@
+// create new root variables
+$brand-primary: #815ad0;
+$brand-background: #f5f4f5;
+$brand-star: #f2ab40;
+$brand-star-background: #f4d49d;
+$brand-primary-background: #948cc4;
+$brand-primary-light: #bca0f0;
+
+// create new map
+$custom-colors: (
+  "primary": $brand-primary,
+  "primary-background": $brand-primary-background,
+  "primary-light": $brand-primary-light,
+  "background": $brand-background,
+  "star": $brand-star,
+  "star-background": $brand-star-background,
+);
+
+@import "../node_modules/@coreui/coreui/scss/coreui";
+
+// merge new map with existing map
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
